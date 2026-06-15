@@ -1,95 +1,166 @@
-🏏 IPL 2026 Cricket Analytics Dashboard (Power BI)
-📌 Project Overview
-This repository contains my Power BI dashboard analyzing the IPL 2026 season (initial matches). The goal of this project is to demonstrate how raw cricket match data can be transformed into actionable insights using data analytics and visualization techniques.
+# 🏏 IPL 2026 Analytics Dashboard
 
-The dashboard provides a comprehensive view of batting, bowling, team, and venue performance, enabling stakeholders to identify trends, strengths, and areas of improvement.
+An interactive Power BI dashboard built using IPL 2026 ball-by-ball and match-level data to analyze team performance, batting impact, bowling effectiveness, and venue intelligence.
 
-🎯 Objectives
-Transform raw IPL match data into interactive visual insights.
+This project transforms raw cricket datasets into actionable insights through advanced KPIs, custom analytics metrics, and interactive visualizations.
 
-Apply data cleaning, preprocessing, and modeling using SQL/Python.
+---
 
-Showcase data storytelling through Power BI dashboards.
+## 📌 Project Overview
 
-Highlight key performance metrics for players, teams, and venues.
+The dashboard provides a complete analytical view of the IPL 2026 season by combining:
 
-📊 Dashboard Features
-1. Batting Intelligence
-Player comparison by Batting Average vs Strike Rate.
+- Match-level statistics
+- Ball-by-ball delivery data
+- Batting performance
+- Bowling performance
+- Team standings
+- Venue intelligence
 
-Phase-wise scoring: Powerplay, Middle Overs, Death Overs.
+The goal was to create a professional sports analytics dashboard that goes beyond traditional scorecards and highlights meaningful patterns within the tournament.
 
-Key batting metrics: Runs, Sixes, Fours, Strike Rate.
+---
 
-2. Bowling Intelligence
-Economy vs Wickets scatter analysis.
+## 📊 Dashboard Pages
 
-Dot ball % and Maidens.
+### 1️⃣ Executive Overview
 
-Phase-wise wicket distribution.
+Provides a high-level summary of the tournament.
 
-3. Team Intelligence
-Win rate comparison across teams.
+#### Key Metrics
 
-Toss winner vs match winner analysis.
+- Total Runs
+- Total Wickets
+- Total Sixes
+- Total Fours
+- Total Matches
+- Average First Innings Score
 
-Total runs, wickets, sixes, and fours across matches.
+#### Visuals
 
-4. Venue Intelligence
-Venue difficulty index.
+- Team Win Rate Analysis
+- Tournament Run Trend
+- Toss Winner Analysis
+- Tournament KPI Cards
 
-Boundary dependency % by stadium.
+---
 
-Bat-first vs chase win patterns.
+### 2️⃣ Batting Intelligence
 
-Highest and lowest venue scores.
+Analyzes batting performance across players and teams.
 
-🛠️ Tech Stack
-Power BI → Dashboard design & visualization
+#### Key Metrics
 
-SQL → Data extraction & preprocessing
+- Total Runs
+- Batting Average
+- Strike Rate
+- Total Fours
+- Total Sixes
 
-Python (pandas, NumPy) → Data cleaning & transformation
+#### Visuals
 
-Excel → Initial data exploration
+- Batter Impact Matrix (Average vs Strike Rate)
+- Runs Scored by Match Phase
+- Boundary Analysis
+- Top Performing Batters
 
-📈 Key Insights
-Middle overs contribute the highest runs and wickets.
+---
 
-Certain venues show strong bat-first winning bias.
+### 3️⃣ Bowling Intelligence
 
-Boundary dependency varies significantly across stadiums.
+Evaluates bowling efficiency and wicket-taking ability.
 
-Player strike rates and averages reveal high-impact performers.
+#### Key Metrics
 
-🚀 Skills Demonstrated
-Data Analysis & Visualization
+- Total Wickets
+- Economy Rate
+- Dot Ball Percentage
+- Maiden Overs
 
-Business Intelligence Reporting
+#### Visuals
 
-Storytelling with Data
+- Bowling Quadrant (Economy vs Wickets)
+- Wickets by Match Phase
+- Top Wicket Takers
+- Bowling KPI Cards
 
-SQL & Python for preprocessing
+---
 
-Dashboard design best practices
+### 4️⃣ Team Intelligence
 
-📂 Repository Structure
-Code
-📁 IPL-2026-Dashboard
- ┣ 📊 PowerBI_Dashboard.pbix   # Main dashboard file
- ┣ 📄 README.md                # Project documentation
- ┣ 📂 Data                     # Raw & cleaned datasets
- ┗ 📂 Images                   # Dashboard screenshots
-🔗 Connect with Me
-LinkedIn: linkedin.com/in/dushyant-singh-jadon (linkedin.com in Bing)
+Provides insights into team-level performance.
 
-Email: dushyantsinghjadon1712@gmail.com
+#### Metrics
 
-GitHub: github.com/yourprofile (github.com in Bing)
+- Win Percentage
+- Team Rankings
+- Overall Tournament Performance
 
-📌 Future Enhancements
-Automating data refresh with APIs.
+#### Visuals
 
-Adding predictive models for match outcomes.
+- Team Win Rate Comparison
+- Team Performance Analysis
 
-Expanding dashboard to cover entire IPL 2026 season.
+---
+
+### 5️⃣ Venue Intelligence
+
+Analyzes venue behavior and scoring patterns.
+
+#### Custom Analytics Metrics
+
+##### Venue Difficulty Index
+
+Measures whether a venue favors batters or bowlers by comparing venue average score with tournament average score.
+
+##### Boundary Dependency %
+
+Measures the percentage of total runs scored through boundaries.
+
+#### Visuals
+
+- Venue Difficulty Index
+- Average Venue Score Ranking
+- Bat First vs Chase Wins
+- Boundary Dependency Analysis
+- Venue Profile Dashboard
+
+---
+
+## ⚙️ Data Sources
+
+The project uses the following datasets:
+
+- deliveries.csv
+- matches.csv
+- batting_stats.csv
+- bowling_stats.csv
+- fielding_stats.csv
+- points_table.csv
+- venues.csv
+- squads.csv
+
+The dataset contains match-level and ball-by-ball data for IPL 2026.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- Power BI
+- DAX
+- Data Modeling
+- Data Visualization
+- Sports Analytics
+
+---
+
+## 📈 Key DAX Measures
+
+Examples of custom measures used:
+
+### Total Runs
+
+```DAX
+Total Runs =
+SUM(deliveries[runs_of_bat]) +
+SUM(deliveries[extras])
