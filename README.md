@@ -164,3 +164,76 @@ Examples of custom measures used:
 Total Runs =
 SUM(deliveries[runs_of_bat]) +
 SUM(deliveries[extras])
+```
+###Dot Ball %
+```
+Dot Ball % =
+DIVIDE(
+SUM(bowling_stats[dot_balls]),
+SUM(bowling_stats[balls])
+) * 100
+```
+###Venue Difficulty Index
+```
+Venue Difficulty Index =
+DIVIDE(
+AVERAGE(matches[first_ings_score]),
+CALCULATE(
+AVERAGE(matches[first_ings_score]),
+ALL(matches[venue])
+)
+)
+Boundary Dependency %
+Boundary Dependency % =
+DIVIDE(
+[Boundary Runs],
+[Total Runs]
+) * 100
+```
+🎯 Business Questions Answered
+Which teams performed best during IPL 2026?
+Which batters combined high averages with aggressive strike rates?
+Which bowlers balanced wicket-taking ability with economy?
+Which venues favored batting and which favored bowling?
+Which venues produced the highest scoring matches?
+How important were boundaries in venue scoring patterns?
+Did teams have more success batting first or chasing?
+📷 Dashboard Screenshots
+Executive Overview
+
+
+<img width="1432" height="808" alt="Screenshot 2026-06-14 113417" src="https://github.com/user-attachments/assets/4a64cdf2-e693-4d53-9eda-59eb8c12f1b8" />
+
+
+Batting Intelligence
+<img width="1430" height="851" alt="Screenshot 2026-06-14 113504" src="https://github.com/user-attachments/assets/943649b5-7a90-4cbc-81fd-d0641a1aa17c" />
+
+
+
+Bowling Intelligence
+<img width="1432" height="846" alt="Screenshot 2026-06-14 113526" src="https://github.com/user-attachments/assets/da5c4226-3c25-43c6-be85-50699f2ccc6b" />
+
+
+
+Team Intelligence
+<img width="1417" height="851" alt="image" src="https://github.com/user-attachments/assets/8278ff5b-20ca-44c4-95d5-40caf5b7a1a7" />
+
+
+
+Venue Intelligence
+<img width="1435" height="851" alt="Screenshot 2026-06-14 113609" src="https://github.com/user-attachments/assets/185af4cd-c5ad-4db2-8e4b-e519cd923bf3" />
+
+
+
+##🚀 Future Improvements
+-Player profile drill-through pages
+-Predictive match outcome analysis
+-Advanced player impact scoring
+-Venue clustering and segmentation
+-Team attack and defense ratings
+
+##👨‍💻 Author
+
+Dushyant Singh Jadon
+
+Aspiring Data Analyst | Power BI Developer | Sports Analytics Enthusiast
